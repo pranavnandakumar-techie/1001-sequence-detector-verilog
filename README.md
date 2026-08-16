@@ -27,8 +27,7 @@ moore_1001/
   non_overlapping/
     non_overlapping_seqdetector_moore.v  # includes __dflip
     tb_nonoverlapping_seqdetector_moore.v
-docs/
-  testbench-timing-notes.md              # two timing bugs found + fixed
+
 ```
 
 Each detector file defines its own D flip-flop module (`dflip`, `d_flip`,
@@ -64,9 +63,6 @@ tb_overlapping_seqdetector_mealy.v
 Compile both together and run the testbench module (`tb_...`) as the
 simulation top.
 
-## Notes
 
-See [`docs/testbench-timing-notes.md`](docs/testbench-timing-notes.md) for
-two real timing bugs (a race condition and a dropped first bit) found and
 fixed while building these — worth reading if you're writing your own
 negedge-sampled testbenches.
